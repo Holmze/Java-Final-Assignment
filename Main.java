@@ -8,7 +8,7 @@ import finalWork.WriteFile;
 public class Main{
 
 	public static void main(String[] args) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		//String[] year = {"2006","2007","2008"};
 		File file = new File("D:\\Java\\FinalWork\\src\\txtdata");
 		GetFile getfile = new GetFile(file);
@@ -22,12 +22,10 @@ public class Main{
 }
 class AThread extends Thread{
 	public void run(String year) {
-		for(int i=0;i<3;i++) {
-			String path = "D:\\Java\\FinalWork\\src\\txtdata\\"+year+"ÄêĞÂÁ¢ÏîÄ¿±í.txt";
-			ReadFile rf = new ReadFile();
-			WriteFile wf = new WriteFile();
-			wf.Write(rf.Read(path),year);
-		}
+		String path = "D:\\Java\\FinalWork\\src\\txtdata\\"+year+"å¹´æ–°ç«‹é¡¹ç›®è¡¨.txt";
+		ReadFile rf = new ReadFile();
+		WriteFile wf = new WriteFile();
+		wf.Write(rf.Read(path),year);
 		try {
 			sleep(5);
 		}catch(InterruptedException e) {
